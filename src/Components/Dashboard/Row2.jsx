@@ -40,57 +40,57 @@ const Row2 = () => {
     {
       _id: "1",
       day: "Sun",
-      operationalExpenses: 1000,
-      nonOperationalExpenses: 10000,
+      activeConsumption: 1000,
+      passiveConsumption: 10000,
     },
     {
       _id: "2",
       day: "Mon",
-      operationalExpenses: 2000,
-      nonOperationalExpenses: 7500,
+      activeConsumption: 2000,
+      passiveConsumption: 7500,
     },
     {
       _id: "3",
       day: "Tue",
-      operationalExpenses: 3000,
-      nonOperationalExpenses: 7000,
+      activeConsumption: 3000,
+      passiveConsumption: 7000,
     },
     {
       _id: "4",
       day: "Wed",
-      operationalExpenses: 2500,
-      nonOperationalExpenses: 4000,
+      activeConsumption: 2500,
+      passiveConsumption: 4000,
     },
     {
       _id: "5",
       day: "Thurs",
-      operationalExpenses: 3500,
-      nonOperationalExpenses: 4500,
+      activeConsumption: 3500,
+      passiveConsumption: 4500,
     },
     {
       _id: "5",
       day: "Fri",
-      operationalExpenses: 1200,
-      nonOperationalExpenses: 6500,
+      activeConsumption: 1200,
+      passiveConsumption: 6500,
     },
     {
       _id: "5",
       day: "Sat",
-      operationalExpenses: 2000,
-      nonOperationalExpenses: 6000,
+      activeConsumption: 2000,
+      passiveConsumption: 6000,
     },
     {
       _id: "5",
       day: "Sun",
-      operationalExpenses: 3000,
-      nonOperationalExpenses: 5000,
+      activeConsumption: 3000,
+      passiveConsumption: 5000,
     },
   ];
 
   const productData = [
     { price: 1000, expense: 500 },
     { price: 1500, expense: 1000 },
-    {  price: 2000, expense: 1500 },
+    { price: 2000, expense: 1500 },
     { price: 2500, expense: 2000 },
     { price: 3500, expense: 1850 },
     { price: 3000, expense: 2000 },
@@ -105,18 +105,16 @@ const Row2 = () => {
     { price: 2100, expense: 2500 },
     { price: 2500, expense: 2500 },
 
-
-   
     // Add more items as needed
   ];
   // console.log(data);
   const operationalExpenses = useMemo(() => {
     return operationalData.map(
-      ({ day, operationalExpenses, nonOperationalExpenses }) => {
+      ({ day, activeConsumption, passiveConsumption }) => {
         return {
           day: day,
-          "Operational Expenses": operationalExpenses,
-          "Non Operational Expenses": nonOperationalExpenses,
+          "Active Consumption": activeConsumption,
+          "Passive Consumption": passiveConsumption,
         };
       }
     );
@@ -177,13 +175,13 @@ const Row2 = () => {
             <Line
               yAxisId="left"
               type="monotone"
-              dataKey="Non Operational Expenses"
+              dataKey="Passive Consumption"
               stroke={palette.tertiary[500]}
             />
             <Line
               yAxisId="right"
               type="monotone"
-              dataKey="Operational Expenses"
+              dataKey="Active Consumption"
               stroke={palette.primary.main}
             />
           </LineChart>
@@ -229,9 +227,7 @@ const Row2 = () => {
             <Typography mt="0.4rem" variant="h5">
               Power Consumption increment/decrement
             </Typography>
-            <Typography variant="h6">
-             Increment by 25%
-            </Typography>
+            <Typography variant="h6">Increment by 25%</Typography>
           </Box>
         </FlexBetween>
       </DashboardBox>
@@ -250,18 +246,17 @@ const Row2 = () => {
             <XAxis
               type="number"
               dataKey="price"
-              name="consumption"
+              name="Consumption"
               axisLine={false}
               tickLine={false}
               style={{
                 fontSize: "10px",
               }}
-              
             />
             <YAxis
               type="number"
               dataKey="expense"
-              name="expense"
+              name="Price"
               axisLine={false}
               tickLine={false}
               style={{
@@ -270,7 +265,7 @@ const Row2 = () => {
               tickFormatter={(v) => `$${v}`}
             />
             <ZAxis type="number" range={[20]} />
-            <Tooltip formatter={(v) => `$${v}`} />
+            <Tooltip formatter={(v) => `${v}`} />
             <Scatter
               name="Product Expense Ratio"
               data={productExpenseData}

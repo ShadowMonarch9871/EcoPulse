@@ -25,36 +25,36 @@ const Row1 = () => {
   // console.log("Error", error);
 
   const revenueExpenses = [
-    { name: "Mon", revenue: 33000, expenses: 90000 },
-    { name: "Tue", revenue: 26000, expenses: 80000 },
-    { name: "Wed", revenue: 20000, expenses: 50000 },
-    { name: "Thurs", revenue: 35000, expenses: 40000 },
-    { name: "Fri", revenue: 50000, expenses: 60000 },
-    { name: "Sat", revenue: 55000, expenses: 85000 },
-    { name: "Sun", revenue: 65000, expenses: 95000 },
+    { name: "Mon", savings: 33000, consumption: 90000 },
+    { name: "Tue", savings: 26000, consumption: 80000 },
+    { name: "Wed", savings: 20000, consumption: 50000 },
+    { name: "Thurs", savings: 35000, consumption: 40000 },
+    { name: "Fri", savings: 50000, consumption: 60000 },
+    { name: "Sat", savings: 55000, consumption: 85000 },
+    { name: "Sun", savings: 65000, consumption: 95000 },
 
     // Add more months as needed
   ];
 
   const revenue = [
-    { name: "HVAC", revenue: 80000 },
-    { name: "Lightings", revenue: 20000 },
-    { name: "IT", revenue: 50000 },
-    { name: "Elevators", revenue: 25000 },
-    { name: "Heating", revenue: 15000 },
-    { name: "Security", revenue: 5000 },
+    { name: "HVAC", Consumption: 80000 },
+    { name: "Lightings", Consumption: 20000 },
+    { name: "IT", Consumption: 50000 },
+    { name: "Elevators", Consumption: 25000 },
+    { name: "Heating", Consumption: 15000 },
+    { name: "Security", Consumption: 5000 },
 
     // Add more months as needed
   ];
 
   const revenueProfit = [
-    { name: "Mon", revenue: 9000, profit: 90000 },
-    { name: "Tue", revenue: 30000, profit: 80000 },
-    { name: "Wed", revenue: 10000, profit: 50000 },
-    { name: "Thurs", revenue: 35000, profit: 40000 },
-    { name: "Fri", revenue: 25000, profit: 60000 },
-    { name: "Sat", revenue: 45000, profit: 85000 },
-    { name: "Sun", revenue: 55000, profit: 95000 },
+    { name: "Mon", Night: 9000, Day: 90000 },
+    { name: "Tue", Night: 30000, Day: 80000 },
+    { name: "Wed", Night: 10000, Day: 50000 },
+    { name: "Thurs", Night: 35000, Day: 40000 },
+    { name: "Fri", Night: 25000, Day: 60000 },
+    { name: "Sat", Night: 45000, Day: 85000 },
+    { name: "Sun", Night: 55000, Day: 95000 },
 
     // Add more months as needed
   ];
@@ -123,7 +123,7 @@ const Row1 = () => {
             <Area
               type="monotone"
               dot={true}
-              dataKey="revenue"
+              dataKey="consumption"
               stroke={palette.primary.main}
               fillOpacity={1}
               fill="url(#colorRevenue)"
@@ -131,7 +131,7 @@ const Row1 = () => {
             <Area
               type="monotone"
               dot={true}
-              dataKey="expenses"
+              dataKey="savings"
               stroke={palette.primary.main}
               fillOpacity={1}
               fill="url(#colorExpenses)"
@@ -192,13 +192,13 @@ const Row1 = () => {
             <Line
               yAxisId="left"
               type="monotone"
-              dataKey="profit"
+              dataKey="Day"
               stroke={palette.tertiary[500]}
             />
             <Line
               yAxisId="right"
               type="monotone"
-              dataKey="revenue"
+              dataKey="Night"
               stroke={palette.primary.main}
             />
           </LineChart>
@@ -255,7 +255,7 @@ const Row1 = () => {
             />
             <Tooltip />
 
-            <Bar dataKey="revenue" fill="url(#colorRevenue)" />
+            <Bar dataKey="Consumption" fill="url(#colorRevenue)" />
           </BarChart>
         </ResponsiveContainer>
       </DashboardBox>
