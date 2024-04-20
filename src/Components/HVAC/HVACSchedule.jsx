@@ -79,6 +79,7 @@ const HVACSchedule = () => {
       <BoxHeader
         title="HVAC Schedule"
         sideText="Change Temperature and Humidity"
+        height="50px"
       />
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <DatePicker
