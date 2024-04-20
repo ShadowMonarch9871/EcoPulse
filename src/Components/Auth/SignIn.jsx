@@ -58,7 +58,7 @@ function SignIn({ onSignIn }) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            placeholder="enter you email"
+            placeholder="Enter your email"
           />
 
           <label htmlFor=""style={{color:"white"}}>Password</label>
@@ -67,7 +67,7 @@ function SignIn({ onSignIn }) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            placeholder="enter you Password"
+            placeholder="Enter your Password"
           />
 
           <button onClick={createUser}>SignIn</button>
