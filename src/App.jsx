@@ -5,7 +5,7 @@ import { Box, CssBaseline } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Dashboard from "./Components/Dashboard/Index";
-import HVACSchedule from "./Components/HVAC/HVACSchedule";
+
 // import Predictions from "@/scenes/predictions";
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []);
@@ -18,7 +18,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/hvacControl" element={<HVACSchedule />} />
+
             </Routes>
           </Box>
         </ThemeProvider>
