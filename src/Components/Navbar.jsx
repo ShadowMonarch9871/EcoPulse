@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Box, Typography, useTheme } from "@mui/material";
 import FlexBetween from "./FlexBetween";
 import PixIcon from "@mui/icons-material/Pix";
-import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
+import ThunderstormIcon from "@mui/icons-material/Thunderstorm";
 // @ts-expect-ignore
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
     <FlexBetween mb="0.5rem" p="0.5rem 0rem" color={palette.grey[300]}>
       {/* Left Side Here */}
       <FlexBetween gap="0.75rem">
-        <ThunderstormIcon  />
+        <ThunderstormIcon />
         <Typography variant="h4" fontSize="16px">
           EcoPulse
         </Typography>
@@ -30,19 +30,19 @@ const Navbar = () => {
               textDecoration: "inherit",
             }}
           >
-            dashboard
+            Dashboard
           </Link>
         </Box>
         <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
           <Link
-            to="/predictions"
-            onClick={() => setSelected("predictions")}
+            to="/hvacControl"
+            onClick={() => setSelected("hvac")}
             style={{
-              color: selected === "predictions" ? "inherit" : palette.grey[700],
+              color: selected === "hvac" ? "inherit" : palette.grey[700],
               textDecoration: "inherit",
             }}
           >
-            predictions
+            HVAC Schedule
           </Link>
         </Box>
       </FlexBetween>
