@@ -45,8 +45,21 @@ const Navbar = () => {
             predictions
           </Link>
         </Box>
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+          <Link
+            to="/signin"
+            onClick={() => setSelected("Auth")}
+            style={{
+              color: selected === "Auth" ? "inherit" : palette.grey[700],
+              textDecoration: "inherit",
+            }}
+          >
+            signIn
+          </Link>
+        </Box>
       </FlexBetween>
     </FlexBetween>
+    
   );
 };
 
