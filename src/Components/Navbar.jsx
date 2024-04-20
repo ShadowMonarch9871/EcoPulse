@@ -54,7 +54,7 @@ const Navbar = () => {
               textDecoration: "inherit",
             }}
           >
-            signIn
+            SignIn
           </Link>
         </Box>
       </FlexBetween>
