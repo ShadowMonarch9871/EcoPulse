@@ -52,7 +52,7 @@ function SignIn({ onSignIn }) {
     
       <div className="container">
         <div className="signup-page">
-          <label htmlFor="">Email</label>
+          <label htmlFor="" style={{color:"white"}}>Email</label>
           <input
             type="email"
             value={email}
@@ -61,7 +61,7 @@ function SignIn({ onSignIn }) {
             placeholder="enter you email"
           />
 
-          <label htmlFor="">Password</label>
+          <label htmlFor=""style={{color:"white"}}>Password</label>
           <input
             type="password"
             value={password}
