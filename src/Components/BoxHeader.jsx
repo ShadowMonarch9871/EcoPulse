@@ -2,7 +2,9 @@ import FlexBetween from "./FlexBetween";
 import { Box, Typography, useTheme } from "@mui/material";
 import PropTypes from 'prop-types';
 
-const BoxHeader = ({ icon, title, subtitle, sideText,height }) => {
+
+const BoxHeader = ({ icon, title, subtitle, sideText,height}) => {
+
   const { palette } = useTheme();
   return (
     <FlexBetween color={palette.grey[400]} margin="1.5rem 1rem 0 1rem" height={height}>
